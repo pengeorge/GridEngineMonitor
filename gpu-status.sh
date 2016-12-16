@@ -9,13 +9,13 @@ while [ 1 ]; do
   clear
   #echo `date` # +%H:%M:%S`
   #echo '================================================================='
-  echo " Server    GPU Name      Fan   Temp   Pwr       Memory-Usage  "
-  echo '================================================================'
+  echo " Server    GPU Name      Fan  Temp   Pwr       Memory-Usage  "
+  echo '==============================================================='
   #echo '----------------------------------------------------------------'
   for i in `seq 0 7`; do
     echo "${str[$i]}"
   done
-  sleep 15
+  sleep 45
 done
 
 # Tue Mar 11 01:04:34 2014       

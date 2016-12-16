@@ -4,7 +4,7 @@
 while [ 1 ]; do
   str=( "`print-cpu-temp.sh`" )
   for server in serverx{27,28,29,32,33,34,35}; do
-    str+=( "`ssh $server 2>&1 \"~/print-cpu-temp.sh\"`" ) #;\
+    str+=( "`ssh $server 2>&1 \"~/print-cpu-temp.sh 2>/dev/null\"`" ) #;\
   done
   clear
   (
