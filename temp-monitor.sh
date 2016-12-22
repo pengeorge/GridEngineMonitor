@@ -3,7 +3,7 @@
 
 while [ 1 ]; do
   str=( "`print-cpu-temp.sh`" )
-  for server in serverx{27,28,29,32,33,34,35}; do
+  for server in serverx{24,27,28,29,32,33,34,35,36,37,38,39,40,41}; do
     str+=( "`ssh $server 2>&1 \"~/print-cpu-temp.sh 2>/dev/null\"`" ) #;\
   done
   clear
@@ -13,11 +13,11 @@ while [ 1 ]; do
   echo " Server       Max       Avg       Min     |  High     Crit    "
   #echo '=============================================================='
   echo '--------------------------------------------------------------'
-  for i in `seq 0 7`; do
+  for i in `seq 0 14`; do
     echo "${str[$i]}"
   done
   ) #| sed 's:\([^ ]\) \( \{2,3\}[^ ]\):\1\2:g'
-  sleep 10
+  sleep 30
 done
 
 #coretemp-isa-0001
